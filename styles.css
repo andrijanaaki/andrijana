@@ -68,8 +68,7 @@ section {
 
 /* Logo styling */
 .logo {
-    width: 80%;
-    max-width: 850px;
+    width: 850px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -169,4 +168,87 @@ section {
 
 /* Posters Section - hover effects */
 #posters .project img {
-    transition: transform 0.3s
+    transition: transform 0.3s ease;
+}
+
+#posters .project img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #C5D575;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 768px) {
+
+    /* Adjust navigation for smaller screens */
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Resize the logo */
+    .logo {
+        width: 100%; /* Full width */
+        max-width: 300px; /* Limit max size */
+        height: auto;
+    }
+
+    /* Resize hero section text */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Make button in hero section responsive */
+    .btn {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    /* Adjust section headings */
+    #about h2, #projects h2, #contact h2, #socials h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Adjust paragraph width for smaller screens */
+    #about p, #contact p {
+        font-size: 1rem;
+        max-width: 90%; /* Increase text width for readability */
+    }
+
+    /* Projects grid should be single column on smaller screens */
+    .project-grid {
+        grid-template-columns: 1fr; /* One column */
+        gap: 10px;
+    }
+
+    /* Resize the project images */
+    .project img {
+        max-width: 100%; /* Full width */
+        height: auto;
+    }
+
+    /* Adjust social media icons */
+    .social-icons a {
+        width: 60px; /* Smaller icons */
+        height: 60px;
+    }
+
+    /* Adjust footer for mobile */
+    footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
